@@ -52,13 +52,28 @@ generatePassword();
   if (numbers) {
     passwordCharSet += key_strings.number;
   };
-  var password = "";
+
+ if (!numbers && !symbols && !uppercase && !lowercase){
+  alert("choose atleast one");
+ }
+ 
+
+
+
+var password = "";
+
   for (let i = 0; i < length; i++) {
     password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
   }
-  return password;
+
+  return password
+
+
+
+      
 }
- }
+  }
+ 
 console.log(generatePassword)
 
 // Get references to the #generate element
